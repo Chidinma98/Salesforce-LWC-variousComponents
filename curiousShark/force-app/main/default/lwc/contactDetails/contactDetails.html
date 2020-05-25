@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Agent">
+        <!-- Show Agent when expense is loaded -->
+        <template if:true={agent.data}>
+            <lightning-record-form object-api-name="Contact" 
+            record-id={agentId} 
+            layout-type="Compact">
+            </lightning-record-form>
+
+            <!-- Data failed to load -->
+        </template> 
+
+        <template if:true = {agent.error} >
+            <div>
+                <p>An error occured while loading the bear record</p>
+            </div>
+
+        </template>
+
+       
+
+
+
+
+    </lightning-card>
+
+</template>
